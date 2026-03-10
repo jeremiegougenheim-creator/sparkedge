@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SparkEdge.ai — AI Digital Strategy | Hong Kong</title>
+<meta name="description" content="The external team behind Sephora China's MMA Gold-winning WeChat commerce platform. AI strategy, e-commerce infrastructure, and global digital rollouts for luxury brands."/>
+<meta name="keywords" content="luxury digital strategy, WeChat e-commerce, Sephora China, DFS, LVMH, AI strategy, Hong Kong consultancy, MMA Smarties"/>
+<meta property="og:title" content="SparkEdge.ai — AI Digital Strategy | Hong Kong"/>
+<meta property="og:description" content="The team behind Sephora China's MMA Gold-winning WeChat commerce platform. Now building for the world's most demanding luxury brands."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://sparkedge.ai"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="canonical" href="https://sparkedge.ai"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400;1,9..144,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet"/>
+
+<style>
+/* ═══════════════════════════
+   TOKENS
+═══════════════════════════ */
+:root {
+  --bg:      #F7F3EC;
+  --bg2:     #EDE8DF;
+  --bg3:     #E5DED3;
+  --ink:     #0E0C09;
+  --ink2:    #1C1917;
+  --ink3:    #2E2A25;
+  --sienna:  #B84C1C;
+  --sienna2: #D45E2A;
+  --forest:  #243F30;
+  --forest2: #325840;
+  --muted:   #7A7165;
+  --muted2:  #B0A89A;
+  --rule:    rgba(14,12,9,.1);
+  --rule2:   rgba(14,12,9,.06);
+  --ff:      'DM Sans', sans-serif;
+  --ffd:     'Fraunces', Georgia, serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--ff);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: rgba(184,76,28,.14); }
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--sienna); }
+
+/* ═══════════════════════════
+   NAV
+═══════════════════════════ */
+#nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 500;
+  padding: 1.75rem 5vw;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: all .4s;
+}
+#nav.stuck {
+  background: rgba(247,243,236,.94);
+  backdrop-filter: blur(20px);
+  padding: 1.1rem 5vw;
+  border-bottom: 1px solid var(--rule);
+}
+.nav-brand {
+  font-family: var(--ffd);
+  font-size: 1.2rem; font-weight: 500;
+  letter-spacing: -.01em;
+  color: var(--ink); text-decoration: none;
+}
+.nav-brand em { font-style: italic; color: var(--sienna); }
+.nav-links { display: flex; align-items: center; gap: 2.5rem; list-style: none; }
+.nav-links a {
+  font-size: .76rem; font-weight: 500;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--muted); text-decoration: none;
+  transition: color .2s;
+}
+.nav-links a:hover { color: var(--ink); }
+.nav-cta {
+  background: var(--ink) !important;
+  color: var(--bg) !important;
+  padding: .55rem 1.35rem;
+  border-radius: 3px;
+}
+.nav-cta:hover { background: var(--ink3) !important; }
+.ham {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 4px;
+}
+.ham span {
+  display: block; width: 22px; height: 1.5px;
+  background: var(--ink); transition: .3s;
+}
+
+/* ═══════════════════════════
+   HERO
+═══════════════════════════ */
+#hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  border-bottom: 1px solid var(--rule);
+}
+.hero-l {
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 10rem 5vw 5rem;
+  border-right: 1px solid var(--rule);
+}
+.hero-ey {
+  display: flex; align-items: center; gap: .75rem;
+  font-size: .68rem; font-weight: 600;
+  letter-spacing: .22em; text-transform: uppercase;
+  color: var(--sienna); margin-bottom: 2.25rem;
+  opacity: 0; animation: up .7s .15s ease both;
+}
+.hero-ey::before {
+  content: ''; display: block;
+  width: 26px; height: 1px; background: var(--sienna);
+}
+h1 {
+  font-family: var(--ffd);
+  font-size: clamp(2.6rem, 5vw, 4.75rem);
+  font-weight: 400; line-height: 1.06;
+  letter-spacing: -.02em; margin-bottom: 1.75rem;
+  opacity: 0; animation: up .8s .3s ease both;
+}
+h1 em { font-style: italic; color: var(--sienna); }
+.hero-sub {
+  font-size: clamp(.95rem, 1.4vw, 1.07rem);
+  font-weight: 300; color: var(--muted);
+  line-height: 1.82; max-width: 460px;
+  margin-bottom: 2.75rem;
+  opacity: 0; animation: up .8s .45s ease both;
+}
+.hero-sub strong { color: var(--ink); font-weight: 500; }
+.hero-ctas {
+  display: flex; gap: 1rem; flex-wrap: wrap;
+  margin-bottom: 4.5rem;
+  opacity: 0; animation: up .8s .6s ease both;
+}
+.btn-fill {
+  display: inline-flex; align-items: center; gap: .55rem;
+  background: var(--ink); color: var(--bg);
+  font-family: var(--ff); font-size: .78rem; font-weight: 600;
+  letter-spacing: .09em; text-transform: uppercase;
+  padding: .9rem 2rem; border-radius: 3px;
+  text-decoration: none;
+  transition: background .25s, transform .25s;
+}
+.btn-fill:hover { background: var(--ink3); transform: translateY(-2px); }
+.btn-line {
+  display: inline-flex; align-items: center; gap: .55rem;
+  background: transparent; color: var(--ink);
+  font-family: var(--ff); font-size: .78rem; font-weight: 500;
+  letter-spacing: .09em; text-transform: uppercase;
+  padding: .9rem 2rem; border-radius: 3px;
+  border: 1px solid var(--rule);
+  text-decoration: none;
+  transition: border-color .25s, transform .25s;
+}
+.btn-line:hover { border-color: var(--ink); transform: translateY(-2px); }
+/* Stats */
+.hero-stats {
+  display: flex;
+  border-top: 1px solid var(--rule);
+  opacity: 0; animation: up .8s .75s ease both;
+}
+.hs { flex: 1; padding: 1.5rem 0; border-right: 1px solid var(--rule2); }
+.hs:last-child { border-right: 0; }
+.hs-n {
+  font-family: var(--ffd);
+  font-size: 1.85rem; font-weight: 400; font-style: italic;
+  color: var(--sienna); line-height: 1;
+}
+.hs-l {
+  font-size: .65rem; font-weight: 500;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--muted); margin-top: .25rem; line-height: 1.4;
+}
+@keyframes up { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+
+/* Hero right — split image */
+.hero-r {
+  display: grid; grid-template-rows: 1fr 1fr;
+  overflow: hidden;
+}
+.hero-img {
+  position: relative; overflow: hidden;
+}
+.hero-img:first-child { border-bottom: 1px solid var(--rule); }
+.hero-img img {
+  width: 100%; height: 100%; display: block;
+  object-fit: cover; object-position: center;
+  filter: sepia(.12) contrast(.94) brightness(.95);
+  transition: transform .9s ease;
+}
+.hero-r:hover .hero-img img { transform: scale(1.04); }
+.img-label {
+  position: absolute; bottom: 1.25rem; left: 1.5rem;
+  background: rgba(247,243,236,.9);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--rule);
+  padding: .32rem .75rem;
+  font-size: .62rem; font-weight: 600;
+  letter-spacing: .15em; text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ═══════════════════════════
+   TICKER
+═══════════════════════════ */
+.ticker {
+  background: var(--forest);
+  overflow: hidden; padding: .9rem 0;
+}
+.ticker-t {
+  display: flex; width: max-content;
+  animation: tick 32s linear infinite;
+}
+.ticker-i {
+  font-size: .65rem; font-weight: 600;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: rgba(247,243,236,.55);
+  padding: 0 2.75rem; white-space: nowrap;
+  display: flex; align-items: center; gap: 2.75rem;
+}
+.ticker-i::after { content: '·'; color: rgba(247,243,236,.2); }
+@keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ═══════════════════════════
+   SHARED
+═══════════════════════════ */
+.sec-label {
+  display: flex; align-items: center; gap: .65rem;
+  font-size: .65rem; font-weight: 600;
+  letter-spacing: .22em; text-transform: uppercase;
+  color: var(--sienna); margin-bottom: 1.1rem;
+}
+.sec-label::before {
+  content: ''; display: block;
+  width: 20px; height: 1.5px; background: var(--sienna);
+}
+h2 {
+  font-family: var(--ffd);
+  font-size: clamp(1.9rem, 3.2vw, 2.9rem);
+  font-weight: 400; line-height: 1.1;
+  letter-spacing: -.02em;
+}
+h2 em { font-style: italic; color: var(--sienna); }
+.hr { height: 1px; background: var(--rule); }
+
+/* ═══════════════════════════
+   SERVICES
+═══════════════════════════ */
+#services { background: var(--bg); }
+.svc-hd {
+  display: grid; grid-template-columns: 1fr 2fr;
+  gap: 4rem; align-items: end;
+  padding: 6rem 5vw 4rem;
+  border-bottom: 1px solid var(--rule);
+}
+.svc-hd-r p {
+  color: var(--muted); font-size: .97rem;
+  line-height: 1.82; max-width: 520px;
+}
+.svc-grid {
+  display: grid; grid-template-columns: repeat(4,1fr);
+}
+.svc {
+  padding: 3rem 2.25rem;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  position: relative; overflow: hidden;
+  transition: background .3s; cursor: default;
+}
+.svc:last-child { border-right: 0; }
+.svc::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0;
+  width: 0; height: 2px;
+  background: var(--sienna);
+  transition: width .45s ease;
+}
+.svc:hover { background: var(--bg2); }
+.svc:hover::after { width: 100%; }
+.svc-n {
+  font-family: var(--ffd); font-style: italic;
+  font-size: 2.75rem; font-weight: 300;
+  color: rgba(14,12,9,.065); line-height: 1;
+  margin-bottom: 1.5rem;
+  transition: color .3s;
+}
+.svc:hover .svc-n { color: rgba(184,76,28,.1); }
+.svc h3 {
+  font-family: var(--ffd);
+  font-size: 1.1rem; font-weight: 400;
+  line-height: 1.25; margin-bottom: .85rem;
+}
+.svc p { font-size: .86rem; color: var(--muted); line-height: 1.82; }
+
+/* ═══════════════════════════
+   PORTFOLIO
+═══════════════════════════ */
+#portfolio { background: var(--bg); }
+.port-hd {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 4rem; align-items: end;
+  padding: 6rem 5vw 3.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+.port-hd-r p {
+  color: var(--muted); font-size: .97rem; line-height: 1.82;
+  margin-bottom: 1.75rem;
+}
+.port-ctrl { display: flex; align-items: center; gap: .75rem; }
+.pbt {
+  width: 40px; height: 40px;
+  border: 1px solid var(--rule); border-radius: 50%;
+  background: transparent; color: var(--ink);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: background .25s, border-color .25s;
+}
+.pbt:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.pdots { display: flex; gap: .4rem; align-items: center; }
+.pdot {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--muted2); cursor: pointer;
+  transition: background .3s, width .3s;
+}
+.pdot.on { background: var(--sienna); width: 18px; border-radius: 2.5px; }
+/* Slider */
+.sv { overflow: hidden; cursor: grab; }
+.sv:active { cursor: grabbing; }
+.st {
+  display: flex; gap: 1px;
+  transition: transform .52s cubic-bezier(.32,0,.08,1);
+  will-change: transform;
+}
+.sl {
+  flex: 0 0 50%;
+  border-right: 1px solid var(--rule);
+  overflow: hidden;
+  transition: background .3s;
+}
+.sl:hover { background: var(--bg2); }
+.sl-img {
+  width: 100%; aspect-ratio: 16/9;
+  object-fit: cover; display: block;
+  filter: sepia(.1) contrast(.95) saturate(.88);
+  transition: transform .65s ease;
+}
+.sl:hover .sl-img { transform: scale(1.025); }
+.sl-body { padding: 2.25rem 2.5rem 2.75rem; }
+.sl-tag {
+  font-size: .63rem; font-weight: 600;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--sienna); margin-bottom: .75rem;
+}
+.sl h3 {
+  font-family: var(--ffd);
+  font-size: 1.3rem; font-weight: 400;
+  line-height: 1.2; margin-bottom: .65rem;
+}
+.sl p {
+  font-size: .86rem; color: var(--muted);
+  line-height: 1.8; margin-bottom: 1.35rem;
+}
+.sl-award {
+  display: inline-flex; align-items: center; gap: .55rem;
+  border: 1px solid var(--rule);
+  padding: .38rem .9rem;
+  font-size: .73rem; font-weight: 500;
+  color: var(--forest);
+  font-family: var(--ffd); font-style: italic;
+}
+.sl-award-gold { border-color: #C9A84C; color: #8A6A10; }
+.sl-met {
+  display: inline-flex; align-items: center; gap: .55rem;
+  border: 1px solid var(--rule);
+  padding: .38rem .9rem;
+  font-size: .73rem; font-weight: 400;
+  color: var(--muted);
+  font-family: var(--ffd); font-style: italic;
+}
+
+/* ═══════════════════════════
+   ABOUT
+═══════════════════════════ */
+#about {
+  display: grid; grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--rule);
+}
+.about-vis {
+  position: relative; overflow: hidden;
+  border-right: 1px solid var(--rule);
+}
+.about-vis img {
+  width: 100%; height: 100%; display: block;
+  object-fit: cover; object-position: center;
+  min-height: 580px;
+  filter: sepia(.1) contrast(.95) brightness(.9);
+  transition: transform .7s ease;
+}
+.about-vis:hover img { transform: scale(1.03); }
+.about-caption {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 3.5rem 3rem 2.25rem;
+  background: linear-gradient(to top, rgba(14,12,9,.72), transparent);
+}
+.about-caption blockquote {
+  font-family: var(--ffd); font-style: italic;
+  font-size: clamp(1.15rem, 1.8vw, 1.55rem);
+  font-weight: 300; color: var(--bg);
+  line-height: 1.35; max-width: 380px;
+}
+.about-caption cite {
+  display: block; margin-top: .85rem;
+  font-style: normal; font-size: .65rem;
+  letter-spacing: .16em; text-transform: uppercase;
+  color: rgba(247,243,236,.5);
+}
+.about-txt {
+  padding: 6rem 5vw;
+  display: flex; flex-direction: column; justify-content: center;
+  background: var(--bg2);
+}
+.about-txt h2 { margin-bottom: 1.35rem; }
+.about-txt p {
+  font-size: .96rem; color: var(--muted);
+  line-height: 1.85; margin-bottom: 1rem;
+}
+.about-txt p strong { color: var(--ink); font-weight: 500; }
+.about-txt p:last-of-type { margin-bottom: 0; }
+.tags {
+  display: flex; gap: .5rem; flex-wrap: wrap;
+  margin-top: 2.25rem;
+}
+.tag {
+  border: 1px solid var(--rule);
+  padding: .28rem .8rem;
+  font-size: .7rem; font-weight: 500;
+  letter-spacing: .06em; color: var(--muted);
+  transition: border-color .2s, color .2s;
+}
+.tag:hover { border-color: var(--sienna); color: var(--sienna); }
+
+/* ═══════════════════════════
+   WHY US
+═══════════════════════════ */
+#why {
+  background: var(--forest);
+  padding: 7rem 5vw;
+}
+.why-in {
+  display: grid; grid-template-columns: 1fr 2fr;
+  gap: 7rem; align-items: start;
+}
+.why-l .sec-label { color: rgba(247,243,236,.38); }
+.why-l .sec-label::before { background: rgba(247,243,236,.3); }
+.why-l h2 { color: var(--bg); }
+.why-l h2 em { color: rgba(247,243,236,.55); }
+.why-l p {
+  color: rgba(247,243,236,.45);
+  font-size: .96rem; line-height: 1.82;
+  margin-top: 1.25rem;
+}
+.why-cols {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 0;
+}
+.why-c {
+  padding: 0 2.5rem;
+  border-left: 1px solid rgba(247,243,236,.1);
+  transition: border-color .3s; cursor: default;
+}
+.why-c:first-child { padding-left: 0; border-left: 0; }
+.why-c:hover { border-color: rgba(247,243,236,.25); }
+.why-n {
+  font-family: var(--ffd); font-style: italic;
+  font-size: 3.25rem; font-weight: 300;
+  color: rgba(247,243,236,.08); line-height: 1;
+  margin-bottom: 1.25rem;
+  transition: color .3s;
+}
+.why-c:hover .why-n { color: rgba(247,243,236,.18); }
+.why-c h3 {
+  font-family: var(--ffd);
+  font-size: 1.12rem; font-weight: 400;
+  color: var(--bg); line-height: 1.25;
+  margin-bottom: .75rem;
+}
+.why-c p {
+  font-size: .85rem; line-height: 1.82;
+  color: rgba(247,243,236,.45);
+}
+
+/* ═══════════════════════════
+   CONTACT
+═══════════════════════════ */
+#contact {
+  display: grid; grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--rule);
+}
+.ct-l {
+  padding: 7rem 5vw;
+  border-right: 1px solid var(--rule);
+  background: var(--bg2);
+  display: flex; flex-direction: column; justify-content: center;
+}
+.ct-l h2 { margin-bottom: .95rem; }
+.ct-sub {
+  color: var(--muted); font-size: .97rem;
+  line-height: 1.82; margin-bottom: 3rem;
+}
+.ct-details {
+  display: flex; flex-direction: column;
+  gap: 1.3rem; margin-bottom: 2.5rem;
+}
+.ct-row { display: flex; align-items: flex-start; gap: 1rem; }
+.ct-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--sienna); flex-shrink: 0;
+  margin-top: .6rem;
+}
+.ct-text { font-size: .88rem; color: var(--muted); line-height: 1.6; }
+.ct-text strong { color: var(--ink); font-weight: 500; }
+.ct-text a { color: var(--sienna); text-decoration: none; transition: color .2s; }
+.ct-text a:hover { color: var(--sienna2); }
+.cal-btn {
+  display: inline-flex; align-items: center; gap: .6rem;
+  border: 1px solid var(--rule);
+  padding: .75rem 1.35rem;
+  font-size: .76rem; font-weight: 600;
+  letter-spacing: .09em; text-transform: uppercase;
+  color: var(--forest); text-decoration: none;
+  transition: background .25s, border-color .25s;
+}
+.cal-btn:hover { background: var(--bg3); border-color: var(--forest); }
+/* Form */
+.ct-r { padding: 7rem 5vw; display: flex; flex-direction: column; justify-content: center; }
+.cform-title {
+  font-family: var(--ffd);
+  font-size: 1.6rem; font-weight: 400;
+  margin-bottom: 2rem; color: var(--ink);
+}
+.fg { margin-bottom: 1.15rem; }
+.fg label {
+  display: block; font-size: .65rem; font-weight: 600;
+  letter-spacing: .16em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: .45rem;
+}
+.fg input, .fg textarea, .fg select {
+  width: 100%; background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: .85rem 1rem; color: var(--ink);
+  font-family: var(--ff); font-size: .9rem; font-weight: 300;
+  outline: none; resize: none;
+  transition: border-color .25s, background .25s;
+  border-radius: 0;
+}
+.fg input::placeholder, .fg textarea::placeholder { color: var(--muted2); }
+.fg input:focus, .fg textarea:focus, .fg select:focus {
+  border-color: rgba(184,76,28,.4);
+  background: var(--bg);
+}
+.fg select { cursor: pointer; appearance: none; }
+.fg-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.sub-btn {
+  width: 100%; background: var(--ink); color: var(--bg);
+  font-family: var(--ff); font-weight: 600; font-size: .78rem;
+  letter-spacing: .1em; text-transform: uppercase;
+  border: none; padding: 1.1rem; cursor: pointer;
+  margin-top: .5rem;
+  transition: background .25s, transform .25s;
+}
+.sub-btn:hover { background: var(--ink3); transform: translateY(-2px); }
+.sub-btn:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+.fnote { font-size: .7rem; color: var(--muted2); margin-top: .65rem; text-align: center; }
+
+/* ═══════════════════════════
+   FOOTER
+═══════════════════════════ */
+footer {
+  background: var(--ink2);
+  border-top: 1px solid rgba(247,243,236,.07);
+  padding: 2.5rem 5vw;
+  display: flex; align-items: center;
+  justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+}
+.f-brand {
+  font-family: var(--ffd); font-size: 1.05rem;
+  font-weight: 400; color: var(--bg);
+}
+.f-brand em { font-style: italic; color: rgba(247,243,236,.4); }
+.f-mid {
+  font-size: .71rem; color: rgba(247,243,236,.38);
+  text-align: center; flex: 1; line-height: 1.8;
+}
+.f-mid a { color: rgba(247,243,236,.55); text-decoration: none; transition: color .2s; }
+.f-mid a:hover { color: var(--bg); }
+.f-r { font-size: .67rem; color: rgba(247,243,236,.2); }
+
+/* ═══════════════════════════
+   SCROLL REVEAL
+═══════════════════════════ */
+.sr {
+  opacity: 0; transform: translateY(24px);
+  transition: opacity .85s cubic-bezier(.22,1,.36,1),
+              transform .85s cubic-bezier(.22,1,.36,1);
+}
+.sr.on { opacity: 1; transform: none; }
+.d1 { transition-delay: .08s; }
+.d2 { transition-delay: .16s; }
+.d3 { transition-delay: .24s; }
+.d4 { transition-delay: .32s; }
+
+/* ═══════════════════════════
+   RESPONSIVE
+═══════════════════════════ */
+@media (max-width: 1100px) {
+  .svc-grid { grid-template-columns: 1fr 1fr; }
+  .svc:nth-child(2) { border-right: 0; }
+  .why-in { grid-template-columns: 1fr; gap: 4rem; }
+  .why-cols { gap: 2rem 0; }
+}
+@media (max-width: 960px) {
+  #hero { grid-template-columns: 1fr; }
+  .hero-l { padding-top: 8rem; padding-bottom: 3rem; border-right: 0; border-bottom: 1px solid var(--rule); }
+  .hero-r { height: 55vw; grid-template-rows: 1fr; }
+  .hero-r .hero-img:last-child { display: none; }
+  #about { grid-template-columns: 1fr; }
+  .about-vis { min-height: 55vw; border-right: 0; border-bottom: 1px solid var(--rule); }
+  .about-vis img { min-height: unset; }
+  #contact { grid-template-columns: 1fr; }
+  .ct-l { border-right: 0; border-bottom: 1px solid var(--rule); }
+  .port-hd { grid-template-columns: 1fr; gap: 2rem; }
+  .svc-hd { grid-template-columns: 1fr; gap: 2rem; }
+  .sl { flex: 0 0 82%; }
+}
+@media (max-width: 700px) {
+  .svc-grid { grid-template-columns: 1fr; }
+  .svc { border-right: 0; }
+  .why-cols { grid-template-columns: 1fr; }
+  .why-c { padding: 2rem 0 0; border-left: 0; border-top: 1px solid rgba(247,243,236,.1); }
+  .why-c:first-child { padding-top: 0; border-top: 0; }
+  .fg-row { grid-template-columns: 1fr; }
+  .hero-stats { flex-wrap: wrap; }
+  .hs { flex: 0 0 50%; }
+  .nav-links { display: none; }
+  .ham { display: flex; }
+  #nav.open .nav-links {
+    display: flex; flex-direction: column;
+    position: fixed; top: 0; right: 0; bottom: 0;
+    width: 260px; background: var(--bg);
+    border-left: 1px solid var(--rule);
+    padding: 5rem 2.5rem 2.5rem;
+    gap: 2rem; z-index: 600;
+  }
+  footer { flex-direction: column; text-align: center; }
+  .sl { flex: 0 0 93%; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav id="nav">
+  <a href="#hero" class="nav-brand">Spark<em>Edge</em>.ai</a>
+  <ul class="nav-links" id="menu">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#contact" class="nav-cta">Book a Call</a></li>
+  </ul>
+  <button class="ham" id="ham" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section id="hero">
+  <div class="hero-l">
+    <div class="hero-ey">Hong Kong · Digital Strategy · AI</div>
+    <h1>We build the digital platforms<br><em>luxury brands scale on.</em></h1>
+    <p class="hero-sub">
+      The external team behind Sephora China's <strong>MMA Gold-winning</strong>
+      WeChat commerce platform. Now building for the world's most demanding
+      luxury, hospitality, and prestige brands.
+    </p>
+    <div class="hero-ctas">
+      <a href="https://calendly.com/sparkedge" target="_blank" rel="noopener" class="btn-fill">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Book a Free Strategy Call
+      </a>
+      <a href="mailto:jeremie@sparkedge.ai" class="btn-line">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        jeremie@sparkedge.ai
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="hs">
+        <div class="hs-n">Gold</div>
+        <div class="hs-l">MMA Smarties<br>APAC 2020</div>
+      </div>
+      <div class="hs">
+        <div class="hs-n">3.5M</div>
+        <div class="hs-l">Sephora WeChat<br>viewers</div>
+      </div>
+      <div class="hs">
+        <div class="hs-n">20</div>
+        <div class="hs-l">DFS markets.<br>12 months.</div>
+      </div>
+      <div class="hs">
+        <div class="hs-n">300</div>
+        <div class="hs-l">FICOFI members.<br>Zero compromise.</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-r">
+    <div class="hero-img">
+      <img
+        src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&q=82&auto=format&fit=crop"
+        alt="Hong Kong"/>
+      <div class="img-label">Hong Kong HQ</div>
+    </div>
+    <div class="hero-img">
+      <img
+        src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=82&auto=format&fit=crop"
+        alt="Strategy"/>
+      <div class="img-label">Strategy · Execution</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TICKER ══ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-t">
+    <div class="ticker-i">MMA Smarties Gold 2020</div>
+    <div class="ticker-i">Sephora China</div>
+    <div class="ticker-i">DFS Worldwide</div>
+    <div class="ticker-i">La Samaritaine</div>
+    <div class="ticker-i">FICOFI · Le Club</div>
+    <div class="ticker-i">WeChat Commerce</div>
+    <div class="ticker-i">AI Strategy</div>
+    <div class="ticker-i">Hong Kong · Paris · Shanghai</div>
+    <div class="ticker-i">LVMH</div>
+    <div class="ticker-i">MMA Smarties Gold 2020</div>
+    <div class="ticker-i">Sephora China</div>
+    <div class="ticker-i">DFS Worldwide</div>
+    <div class="ticker-i">La Samaritaine</div>
+    <div class="ticker-i">FICOFI · Le Club</div>
+    <div class="ticker-i">WeChat Commerce</div>
+    <div class="ticker-i">AI Strategy</div>
+    <div class="ticker-i">Hong Kong · Paris · Shanghai</div>
+    <div class="ticker-i">LVMH</div>
+  </div>
+</div>
+
+<!-- ══ SERVICES ══ -->
+<section id="services">
+  <div class="svc-hd">
+    <div>
+      <div class="sec-label sr">What We Do</div>
+      <h2 class="sr d1">Strategy.<br>Build. <em>Scale.</em></h2>
+    </div>
+    <div class="svc-hd-r">
+      <p class="sr d2">We don't sell transformation. We build specific things that do specific jobs — designed to luxury brand standards, measured against real business outcomes.</p>
+    </div>
+  </div>
+  <div class="svc-grid">
+    <div class="svc sr d1">
+      <div class="svc-n">01</div>
+      <h3>AI Integration &amp; Automation</h3>
+      <p>We build AI into the workflows that actually move revenue — not as a pilot, as infrastructure. Recommendation engines, predictive segmentation, automated content pipelines. Designed to luxury brand standards. Measured against real numbers.</p>
+    </div>
+    <div class="svc sr d2">
+      <div class="svc-n">02</div>
+      <h3>Digital Transformation &amp; E-commerce</h3>
+      <p>WeChat Mini Programs, CRM platforms, omnichannel retail architecture. We've built these at Sephora scale — 3.5 million users, ¥100M in a single campaign — and at the precision a 20-country LVMH rollout demands.</p>
+    </div>
+    <div class="svc sr d3">
+      <div class="svc-n">03</div>
+      <h3>Brand &amp; Content Infrastructure</h3>
+      <p>The platforms that let global teams operate with one brand voice across every market. We built the one La Samaritaine launched with. Then replicated it 20 times across the DFS network.</p>
+    </div>
+    <div class="svc sr d4">
+      <div class="svc-n">04</div>
+      <h3>Member &amp; Loyalty Platforms</h3>
+      <p>From ultra-exclusive membership apps for the world's most discerning collectors, to enterprise loyalty programmes at retail scale. We build digital products that make your best customers feel like your only customer.</p>
+    </div>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<!-- ══ PORTFOLIO ══ -->
+<section id="portfolio">
+  <div class="port-hd">
+    <div>
+      <div class="sec-label sr">Selected Work</div>
+      <h2 class="sr d1"><em>Real</em> projects.<br>Verified results.</h2>
+    </div>
+    <div>
+      <p class="sr d2">We don't do vague case studies. Here's what we built, who we built it for, and what happened.</p>
+      <div class="port-ctrl sr d3">
+        <button class="pbt" id="prev" aria-label="Previous">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="pbt" id="next" aria-label="Next">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <div class="pdots" id="pdots"></div>
+      </div>
+    </div>
+  </div>
+  <div class="sv" id="sv">
+    <div class="st" id="st">
+
+      <!-- SLIDE 1: SEPHORA -->
+      <div class="sl">
+        <img class="sl-img"
+          src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=900&q=80&auto=format&fit=crop"
+          alt="Sephora China WeChat platform"/>
+        <div class="sl-body">
+          <div class="sl-tag">WeChat Commerce · Sephora China</div>
+          <h3>Sephora China — WeChat Livestream Commerce Platform</h3>
+          <p>When Tencent opened WeChat to livestream commerce in 2019, our team was first to implement it at luxury retail scale for Sephora China — pioneering a format the entire cosmetics industry subsequently followed.</p>
+          <p style="font-size:.86rem;color:var(--muted);line-height:1.8;margin-bottom:1.35rem">80+ live broadcasts in the first two months. 3.5 million cumulative viewers by end of 2020. 230,000 viewers for a single Estée Lauder Double 11 event. WeChat's contribution to total Sephora China sales grew 2.35× year-on-year.</p>
+          <div class="sl-award sl-award-gold">★ MMA Smarties APAC 2020 — Gold</div>
+        </div>
+      </div>
+
+      <!-- SLIDE 2: DFS -->
+      <div class="sl">
+        <img class="sl-img"
+          src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=900&q=80&auto=format&fit=crop"
+          alt="La Samaritaine DFS"/>
+        <div class="sl-body">
+          <div class="sl-tag">Global Rollout · DFS Worldwide · LVMH</div>
+          <h3>La Samaritaine — Digital Brand Platform, 20 Markets</h3>
+          <p>La Samaritaine reopened in June 2021 after a €750 million renovation — one of the most significant retail relaunches in Europe in decades, managed by DFS under LVMH.</p>
+          <p style="font-size:.86rem;color:var(--muted);line-height:1.8;margin-bottom:1.35rem">We built the digital brand portal that underpins La Samaritaine's global content and marketing operations, then deployed it across 20 DFS locations worldwide — each adapted to its local market — in under 12 months.</p>
+          <div class="sl-met">20-country rollout · 12 months · LVMH standards</div>
+        </div>
+      </div>
+
+      <!-- SLIDE 3: FICOFI -->
+      <div class="sl">
+        <img class="sl-img"
+          src="https://images.unsplash.com/photo-1568213816046-0ee1c42bd559?w=900&q=80&auto=format&fit=crop"
+          alt="Fine wine FICOFI"/>
+        <div class="sl-body">
+          <div class="sl-tag">Luxury Membership · Fine Wine · Paris</div>
+          <h3>FICOFI — Le Club Members Digital Platform</h3>
+          <p>Founded in Bordeaux in 1990, FICOFI is one of the most discreet and prestigious fine wine clubs in the world. Its 300 Members — drawn from finance, industry, and the arts — have direct access to estates that don't advertise: Château Lafite, DRC, Petrus, and beyond.</p>
+          <p style="font-size:.86rem;color:var(--muted);line-height:1.8;margin-bottom:1.35rem">We built the digital membership platform and app: cellar management, exclusive event access, in-depth editorial content, direct lines to the châteaux. When 300 Members expect nothing less than perfect, the digital experience has to match.</p>
+          <div class="sl-met">300 Members · Château Lafite · DRC · Petrus</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<!-- ══ ABOUT ══ -->
+<section id="about">
+  <div class="about-vis">
+    <img
+      src="https://images.unsplash.com/photo-1624996379697-f01d168b1a52?w=900&q=85&auto=format&fit=crop"
+      alt="SparkEdge — strategy" loading="lazy"/>
+    <div class="about-caption">
+      <blockquote>"Every brief starts with the business outcome. Not the platform."</blockquote>
+      <cite>Jérémie Gougenheim, Founder — SparkEdge.ai</cite>
+    </div>
+  </div>
+  <div class="about-txt">
+    <div class="sec-label sr">About</div>
+    <h2 class="sr d1">The external team that built<br><em>Sephora China's</em> most-awarded platform.</h2>
+    <div style="margin-top:1.85rem">
+      <p class="sr d2">
+        SparkEdge is led by <strong>Jérémie Gougenheim</strong>. As Partner &amp; Director of Business at Mobile Now Group, Jérémie brought the LVMH accounts into the agency — Sephora China and DFS Worldwide — and led those relationships for five years. The work produced during that period won a Gold at MMA Smarties APAC 2020.
+      </p>
+      <p class="sr d3">
+        The same external team — senior engineers, project directors, and UX leads who shipped those platforms — continues to work with SparkEdge. They remain among the most experienced luxury digital builders operating in China and Asia-Pacific.
+      </p>
+      <p class="sr d3">
+        Jérémie's background before digital strategy is unusual for this industry: MSc in International Finance, University of Westminster. A career in capital markets, derivatives, and proprietary trading before moving into luxury digital consultancy. That financial discipline shapes how SparkEdge works: <strong>outcomes first, not outputs.</strong>
+      </p>
+      <p class="sr d4">
+        We are based in Hong Kong. We work across Asia and Europe. We are selective about what we take on.
+      </p>
+    </div>
+    <div class="tags sr d4">
+      <span class="tag">MMA Gold 2020</span>
+      <span class="tag">Sephora China</span>
+      <span class="tag">DFS Worldwide</span>
+      <span class="tag">LVMH</span>
+      <span class="tag">FICOFI</span>
+      <span class="tag">Hong Kong</span>
+      <span class="tag">WeChat Commerce</span>
+      <span class="tag">AI-First</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHY US ══ -->
+<section id="why">
+  <div class="why-in">
+    <div class="why-l">
+      <div class="sec-label sr">Why SparkEdge</div>
+      <h2 class="sr d1">We've <em>done</em> it.<br>Not advised on it.</h2>
+      <p class="sr d2">Three things that are genuinely different about working with us.</p>
+    </div>
+    <div class="why-cols">
+      <div class="why-c sr d1">
+        <div class="why-n">01</div>
+        <h3>We built the platform, not the deck</h3>
+        <p>The Sephora China WeChat platform was not a strategy recommendation. It was designed, built, and delivered by this team. 3.5 million users. A Gold award. A format the industry copied. That is the standard we hold every project to.</p>
+      </div>
+      <div class="why-c sr d2">
+        <div class="why-n">02</div>
+        <h3>Honest about what AI actually does</h3>
+        <p>We build specific AI tools for specific jobs: better recommendations, smarter segmentation, faster content. We tell clients what AI can realistically achieve for them. Sometimes that's less than expected. It's always more useful than the alternative.</p>
+      </div>
+      <div class="why-c sr d3">
+        <div class="why-n">03</div>
+        <h3>The combination that doesn't exist elsewhere</h3>
+        <p>Deep luxury brand experience. Enterprise-scale delivery across Asia and Europe. AI-native execution. Most consultancies have one of these. We have all three — proven, not claimed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact">
+  <div class="ct-l">
+    <div class="sec-label sr">Contact</div>
+    <h2 class="sr d1">Let's talk about what<br>you're <em>actually</em> trying to do.</h2>
+    <p class="ct-sub sr d2">No deck required. Tell us the problem — we'll tell you honestly whether we can help, and what it would realistically take.</p>
+    <div class="ct-details sr d3">
+      <div class="ct-row">
+        <div class="ct-dot"></div>
+        <div class="ct-text">
+          <strong>Email</strong><br>
+          <a href="mailto:jeremie@sparkedge.ai">jeremie@sparkedge.ai</a>
+        </div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-dot"></div>
+        <div class="ct-text">
+          <strong>Office</strong><br>
+          5F EuroTrade Center, 21-23 Des Vœux Road Central<br>
+          China, Hong Kong
+        </div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-dot"></div>
+        <div class="ct-text">
+          <strong>Coverage</strong><br>
+          Asia-Pacific · Europe · Middle East
+        </div>
+      </div>
+    </div>
+    <a href="https://calendly.com/sparkedge" target="_blank" rel="noopener" class="cal-btn sr d4">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      Book a Free 30-Min Strategy Call
+    </a>
+  </div>
+  <div class="ct-r">
+    <p class="cform-title sr">Send a Message</p>
+    <!-- ⚠ Replace xyzabcde with your Formspree form ID at formspree.io -->
+    <form id="cform" class="sr d1" action="https://formspree.io/f/xyzabcde" method="POST">
+      <div class="fg-row">
+        <div class="fg">
+          <label>Full Name</label>
+          <input type="text" name="name" placeholder="Jane Smith" required/>
+        </div>
+        <div class="fg">
+          <label>Company</label>
+          <input type="text" name="company" placeholder="Your brand"/>
+        </div>
+      </div>
+      <div class="fg">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="jane@company.com" required/>
+      </div>
+      <div class="fg">
+        <label>What are you working on?</label>
+        <select name="service">
+          <option value="" disabled selected>Select a service…</option>
+          <option>AI Integration &amp; Automation</option>
+          <option>Digital Transformation / E-commerce</option>
+          <option>Brand &amp; Content Infrastructure</option>
+          <option>Member &amp; Loyalty Platform</option>
+          <option>General Enquiry</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label>Message</label>
+        <textarea name="message" rows="5" placeholder="Tell us the problem. We'll tell you honestly whether we can help." required></textarea>
+      </div>
+      <button type="submit" class="sub-btn" id="sbtn">Send Message</button>
+      <p class="fnote">Confidential. We respond within 24 hours.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="f-brand">Spark<em>Edge</em>.ai</div>
+  <div class="f-mid">
+    © 2026 SparkEdge Digital Ltd. &nbsp;·&nbsp;
+    <a href="mailto:jeremie@sparkedge.ai">jeremie@sparkedge.ai</a> &nbsp;·&nbsp;
+    5F EuroTrade Center, 21-23 Des Vœux Road Central, Hong Kong &nbsp;·&nbsp;
+    <a href="https://sparkedge.ai">sparkedge.ai</a>
+  </div>
+  <div class="f-r">Est. 2025 · Hong Kong</div>
+</footer>
+
+<script>
+/* ── NAV ── */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('stuck', scrollY > 50));
+document.getElementById('ham').addEventListener('click', () => nav.classList.toggle('open'));
+document.querySelectorAll('#menu a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+
+/* ── PORTFOLIO SLIDER ── */
+(function () {
+  const track = document.getElementById('st');
+  const sv    = document.getElementById('sv');
+  const slides = [...track.querySelectorAll('.sl')];
+  const dotsEl = document.getElementById('pdots');
+  const N = slides.length;
+  let cur = 0;
+  const gap = () => 1; // 1px border gap
+  const sw  = () => slides[0].getBoundingClientRect().width + gap();
+
+  // dots
+  slides.forEach((_, i) => {
+    const d = document.createElement('div');
+    d.className = 'pdot' + (i === 0 ? ' on' : '');
+    d.onclick = () => go(i);
+    dotsEl.appendChild(d);
+  });
+  const dots = [...dotsEl.querySelectorAll('.pdot')];
+
+  function go(n) {
+    cur = (n + N) % N;
+    track.style.transform = `translateX(-${cur * sw()}px)`;
+    dots.forEach((d, i) => d.classList.toggle('on', i === cur));
+  }
+
+  document.getElementById('prev').onclick = () => go(cur - 1);
+  document.getElementById('next').onclick = () => go(cur + 1);
+
+  // drag
+  let sx = 0, dragging = false;
+  sv.addEventListener('pointerdown', e => {
+    sx = e.clientX; dragging = true;
+    track.style.transition = 'none';
+    sv.setPointerCapture(e.pointerId);
+  });
+  sv.addEventListener('pointermove', e => {
+    if (!dragging) return;
+    track.style.transform = `translateX(${-(cur * sw()) + (e.clientX - sx)}px)`;
+  });
+  sv.addEventListener('pointerup', e => {
+    if (!dragging) return; dragging = false;
+    track.style.transition = 'transform .52s cubic-bezier(.32,0,.08,1)';
+    const d = e.clientX - sx;
+    if (d < -45) go(cur + 1);
+    else if (d > 45) go(cur - 1);
+    else go(cur);
+  });
+
+  window.addEventListener('resize', () => go(cur));
+  setInterval(() => go(cur + 1), 6000);
+})();
+
+/* ── SCROLL REVEAL ── */
+const obs = new IntersectionObserver(es => {
+  es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.sr').forEach(el => obs.observe(el));
+
+/* ── FORM ── */
+document.getElementById('cform').addEventListener('submit', () => {
+  const btn = document.getElementById('sbtn');
+  btn.textContent = 'Sending…'; btn.disabled = true;
+  setTimeout(() => {
+    btn.textContent = 'Sent — we\'ll be in touch';
+    btn.style.background = 'var(--forest)';
+  }, 900);
+});
+</script>
+</body>
+</html>
