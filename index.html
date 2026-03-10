@@ -71,13 +71,7 @@ body {
   padding: 1.1rem 5vw;
   border-bottom: 1px solid var(--rule);
 }
-.nav-brand {
-  font-family: var(--ffd);
-  font-size: 1.2rem; font-weight: 500;
-  letter-spacing: -.01em;
-  color: var(--ink); text-decoration: none;
-}
-.nav-brand em { font-style: italic; color: var(--sienna); }
+.nav-brand { text-decoration: none; display: flex; align-items: center; }
 .nav-links { display: flex; align-items: center; gap: 2.5rem; list-style: none; }
 .nav-links a {
   font-size: .76rem; font-weight: 500;
@@ -665,7 +659,13 @@ footer {
 
 <!-- ══ NAV ══ -->
 <nav id="nav">
-  <a href="#hero" class="nav-brand">Spark<em>Edge</em>.ai</a>
+  <a href="#hero" class="nav-brand" aria-label="SparkEdge.ai">
+    <svg viewBox="0 0 420 70" width="168" height="28" xmlns="http://www.w3.org/2000/svg">
+      <text x="4" y="58" font-family="'DM Sans', Helvetica, Arial, sans-serif" font-size="56" letter-spacing="0">
+        <tspan font-weight="700" fill="#0E0C09">Spark</tspan><tspan font-weight="300" fill="#274B38">edge.ai</tspan>
+      </text>
+    </svg>
+  </a>
   <ul class="nav-links" id="menu">
     <li><a href="#services">Services</a></li>
     <li><a href="#portfolio">Work</a></li>
@@ -1023,7 +1023,13 @@ footer {
 
 <!-- ══ FOOTER ══ -->
 <footer>
-  <div class="f-brand">Spark<em>Edge</em>.ai</div>
+  <div class="f-brand">
+    <svg viewBox="0 0 420 70" width="134" height="22" xmlns="http://www.w3.org/2000/svg">
+      <text x="4" y="58" font-family="'DM Sans', Helvetica, Arial, sans-serif" font-size="56" letter-spacing="0">
+        <tspan font-weight="700" fill="#F7F3EC">Spark</tspan><tspan font-weight="300" fill="rgba(247,243,236,0.55)">edge.ai</tspan>
+      </text>
+    </svg>
+  </div>
   <div class="f-mid">
     © 2026 SparkEdge Digital Ltd. &nbsp;·&nbsp;
     <a href="/cdn-cgi/l/email-protection#c2a8a7b0a7afaba782b1b2a3b0a9a7a6a5a7eca3ab"><span class="__cf_email__" data-cfemail="a3c9c6d1c6cecac6e3d0d3c2d1c8c6c7c4c68dc2ca">[email&#160;protected]</span></a> &nbsp;·&nbsp;
